@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아 심심하다</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #game-container {
+        margin-top: 50px;
+    }
+    #ball {
+        position: absolute;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h1>호날두 클릭 게임</h1>
+    <div id="game-container">
+        <h3>유로 언제 시작하냐 !</h3>
+        <p>현재 점수: <span id="score">0</span></p>
+        <img id="ball" src="https://i.namu.wiki/i/XMmcQpPTs6VvPGvF5sK4HTjzsjN5yj5ZPaJNwQBKLfFat1Xj6PYpHQjoilIiSNBWRX9GQm-fAxZRuGZGrFfTXw.webp" width="100" alt="공 이미지">
+    </div>
+
+    <script>
+        var score = 0;
+
+        document.getElementById("ball").onclick = function() {
+            score++;
+            document.getElementById("score").textContent = score;
+            moveBall();
+        };
+
+        function moveBall() {
+            var ball = document.getElementById("ball");
+            var maxX = window.innerWidth - ball.offsetWidth;
+            var maxY = window.innerHeight - ball.offsetHeight;
+            var newX = Math.floor(Math.random() * maxX);
+            var newY = Math.floor(Math.random() * maxY);
+            ball.style.left = newX + "px";
+            ball.style.top = newY + "px";
+        }
+    </script>
+</body>
+</html>
