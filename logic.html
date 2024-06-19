@@ -4,8 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    h1, h2,h3 {
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .results {
+      display: none;
+      text-align: left;
+    }
+    .results h3 {
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+      textarea {
+        height: 120px;
+      }
+      button {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
 </head>
 <body>
+<h1>간단한 로직소개</h1>
+<h3> JS로 만들었습니다.</h3>
+<h2>모르는게 있다면 !!</h2>
+<h3>저는 잘 모르고 <br>
+  여러분의 GPT에게 물어보삼 </h3>
+  <br>  <br>
+  <br>
+  <a href="/index.html"><button>뒤로가기</button></a>
+  <br>
+  <hr>
+  <b>
   <pre>
   function analyzeLyrics() {<br>
     const lyrics = document.getElementById('lyricsInput').value;<br>
@@ -31,7 +107,7 @@
     resultsDiv.innerHTML = `
         <h3>분석 결과</h3>
         <p>총 점수: ${totalScore.toFixed(2)}</p>
-        <button onclick="toggleDetails()">세부 정보 보기</button>
+        <버튼> onclick="toggleDetails()">세부 정보 보기</버튼>
         <div id="details" style="display: none;">
             <p>단어 수 점수: ${wordCountScore.toFixed(2)}</p>
             <p>라임의 다양성 점수: ${rhymeDiversityScore.toFixed(2)}</p>
@@ -140,7 +216,7 @@
         detailsDiv.style.display = 'none';<br>
     }<br>
   }<br>
-</pre>
+</pre></b>
  </p>
 </body>
 </html>
